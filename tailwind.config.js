@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: "class", 
   theme: {
     extend: {
       colors: {
@@ -17,6 +18,17 @@ export default {
         danger: "#EF4444",
         warning: "#FACC15",
         dark: "#111827"
+      },
+      container :{
+        center : true,
+        padding : {
+          DEFAULT  :"1rem",
+          sm : "3rem",
+          lg : "4rem",
+          xl : "5rem",
+          '2xl' : "6rem",
+        },
+        
       }
     },
   },
