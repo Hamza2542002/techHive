@@ -1,23 +1,7 @@
 import React from 'react'
 import Slider from "react-slick";
-export default function ProductSlider() {
-  const carouselContent = [
-    {
-      image: "/images/banner-1.jpg",
-      title: "Explore the Latest Gadgets",
-      subtitle: "From smartphones to smart homes"
-    },
-    {
-      image: "/images/banner-2.jpg",
-      title: "Unbeatable Deals",
-      subtitle: "Discounts up to 50% on top tech"
-    },
-    {
-      image: "/images/banner-3.jpg",
-      title: "Smart Home Essentials",
-      subtitle: "Make your home smarter with our picks"
-    }
-  ];
+export default function ProductSlider({content}) {
+
   var settings = {
     dots: true,
     infinite: true,
@@ -29,9 +13,9 @@ export default function ProductSlider() {
     arrows : false,
   };
   return (
-    <div className="h-[600px] container">
+    <div className="h-[600px] container relative z-30">
       <Slider {...settings}>
-        {carouselContent.map((item, idx) => (
+        {content.map((item, idx) => (
           <div>
             <div
               key={idx}

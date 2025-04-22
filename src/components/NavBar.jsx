@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faCartShopping, faMagnifyingGlass, faSortDown } from '@fortawesome/free-solid-svg-icons'
 export default function NavBar() {
   return (
-    <nav className="bg-white dark:bg-gray-900 dark:text-white duration-100 relative z-40 shadow-md z-0">
+    <nav className="bg-white dark:bg-gray-900 dark:text-white duration-100 relative z-40 lg:z-40 shadow-md">
       <div className='p-4'>
         <div className="container flex justify-between items-center">
           <div className='flex gap-4 items-center'>
@@ -14,9 +14,13 @@ export default function NavBar() {
               to="/"
               className='text-2xl sm:text-3xl text-primary uppercase font-semibold tracking-widest'
             >TeckHive</Link>
-            <div className='opacity-0 lg:opacity-100 peer-checked:opacity-100 peer-checked:block absolute top-96 left-0 -z-10 peer-checked:absolute peer-checked:top-[64px] peer-checked:z-0 peer-checked:left-0 w-full lg:relative lg:top-auto lg:left-auto lg:inline-block duration-300'>
-              <ul className='flex lg:flex-row items-start lg:items-center bg-white lg:bg-transparent gap-1 lg:gap-2 text-start flex-col'>
-                <li className='w-full rounded-lg'><Link to="/" className='text-gray-500 lg:bg-transparent rounded-lg block py-2 lg:hover:bg-transparent hover:bg-gray-100 hover:text-gray-900 font-semibold px-4 dark:hover:text-white duration-200'>Home</Link></li>
+            <div className='opacity-0  w-0 lg:w-full peer-checked:w-full lg:opacity-100 peer-checked:opacity-100 peer-checked:block absolute top-96 left-1/2 z-10 lg:z-0 peer-checked:absolute peer-checked:top-[64px] peer-checked:z-0 peer-checked:left-0  lg:relative lg:top-auto lg:left-auto lg:inline-block duration-300'>
+              <ul className='flex lg:flex-row items-start lg:items-center bg-white lg:bg-transparent gap-0 xl:gap-2 lg:gap-0 text-start flex-col'>
+                <li className='w-full rounded-lg'>
+                  <Link 
+                  to="/" 
+                  className='text-gray-500 lg:bg-transparent rounded-lg block py-2 lg:hover:bg-transparent hover:bg-gray-100 hover:text-gray-900 font-semibold px-4 dark:hover:text-white duration-200'>Home</Link>
+                </li>
                 <li className='w-full rounded-lg'><Link to="/products" className='text-gray-500 lg:bg-transparent rounded-lg block py-2 lg:hover:bg-transparent hover:bg-gray-100 hover:text-gray-900 font-semibold px-4 dark:hover:text-white duration-200'>Products</Link></li>
                 <li className='w-full rounded-lg'><Link to="/categories" className='text-gray-500 lg:bg-transparent rounded-lg block py-2 lg:hover:bg-transparent hover:bg-gray-100 hover:text-gray-900 font-semibold px-4 dark:hover:text-white duration-200'>Categories</Link></li>
                 <li className='w-full rounded-lg'><Link to="/" className='text-gray-500 lg:bg-transparent rounded-lg block py-2 lg:hover:bg-transparent hover:bg-gray-100 hover:text-gray-900 font-semibold px-4 dark:hover:text-white duration-200'>Blogs</Link></li>

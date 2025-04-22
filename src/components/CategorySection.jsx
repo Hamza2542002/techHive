@@ -14,11 +14,11 @@ export default function CategorySection() {
   
   return (
     <>
-      <div className='flex justify-between items-center mb-6 '>
+      <div className='flex justify-between items-center mb-6'>
           <h2 className="text-2xl font-semibold">Shop by Category</h2>
           <Link to={"/categories"} className='hover:text-gray-900 duration-200'>Show All</Link>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1  xxs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           {categories.map((category) => (
             <Link
               key={category.name}

@@ -1,4 +1,4 @@
-[
+const brands = [
   "Apple",
   "Samsung",
   "Sony",
@@ -15,3 +15,4 @@
   "Razer",
   "Logitech"
 ]
+export default brands;

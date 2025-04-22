@@ -1,4 +1,4 @@
-[
+const categories = [
   "Smartphones",
   "Laptops",
   "Tablets",
@@ -10,3 +10,4 @@
   "Monitors",
   "Storage"
 ]
+export default categories;
