@@ -16,7 +16,7 @@ export const products = [
     ],
     "releaseDate": "2022-10-04",
     "images": [
-      "/images/product-1.jpg"
+      "https://m.media-amazon.com/images/I/51kg8-8XG9L._AC_UF350,350_QL80_.jpg"
     ],
     "specifications": {
       "features": "Retina Display, M1 Chip",
@@ -55,7 +55,7 @@ export const products = [
     ],
     "releaseDate": "2024-02-07",
     "images": [
-      "/images/product-2.jpg"
+      "https://images.samsung.com/is/image/samsung/p6pim/sa_en/ls27c902pamxue/gallery/sa-en-viewfinity-s9-27s90pc-ls27c902pamxue-538799972"
     ],
     "specifications": {
       "features": "Bluetooth, Noise Cancelling",
@@ -94,7 +94,7 @@ export const products = [
     ],
     "releaseDate": "2022-06-10",
     "images": [
-      "/images/product-3.jpg"
+      "https://hp.widen.net/content/tvagl1518m/png/tvagl1518m.png?w=800&dpi=72&color=ffffff00"
     ],
     "specifications": {
       "features": "Alexa, Smart Home Control",
@@ -133,7 +133,7 @@ export const products = [
     ],
     "releaseDate": "2024-12-09",
     "images": [
-      "/images/product-4.jpg"
+      "https://i.ebayimg.com/images/g/hisAAOSwuSRmkh7V/s-l1200.jpg"
     ],
     "specifications": {
       "features": "Mechanical keys, RGB",
@@ -172,7 +172,7 @@ export const products = [
     ],
     "releaseDate": "2023-09-17",
     "images": [
-      "/images/product-5.jpg"
+      "https://149367133.v2.pressablecdn.com/wp-content/uploads/2023/10/rog-phone-6d-mlbb-special-edition-20231025.jpg"
     ],
     "specifications": {
       "features": "Touchscreen, Face ID",
@@ -211,7 +211,7 @@ export const products = [
     ],
     "releaseDate": "2023-11-02",
     "images": [
-      "/images/product-6.jpg"
+      "https://images.samsung.com/is/image/samsung/p6pim/us/sm-x520nzsaxar/gallery/us-galaxy-tab-s10-fe-sm-x526-sm-x520nzsaxar-545758713?$PD_GALLERY_PNG$?$recently-viewed-jpg$?$recently-viewed-jpg$"
     ],
     "specifications": {
       "features": "Retina Display, M1 Chip",
@@ -250,7 +250,7 @@ export const products = [
     ],
     "releaseDate": "2024-08-31",
     "images": [
-      "/images/product-7.jpg"
+      "https://uk.store.asus.com/media/catalog/product/9/0/90ar0072-m001r0-tall4.jpg?width=1000&height=450&store=en_UK&image-type=image"
     ],
     "specifications": {
       "features": "Retina Display, M1 Chip",
@@ -289,7 +289,7 @@ export const products = [
     ],
     "releaseDate": "2024-10-18",
     "images": [
-      "/images/product-8.jpg"
+      "https://m.media-amazon.com/images/I/71NlQdsorLL._AC_UF1000,1000_QL80_.jpg"
     ],
     "specifications": {
       "features": "Bluetooth, Noise Cancelling",
@@ -328,7 +328,7 @@ export const products = [
     ],
     "releaseDate": "2024-06-12",
     "images": [
-      "/images/product-9.jpg"
+      "https://m.media-amazon.com/images/I/615HRY2dnML._AC_UF894,1000_QL80_.jpg"
     ],
     "specifications": {
       "features": "Retina Display, M1 Chip",
@@ -367,7 +367,7 @@ export const products = [
     ],
     "releaseDate": "2024-09-25",
     "images": [
-      "/images/product-10.jpg"
+      "https://assets.hardwarezone.com/img/DSC_0331_0.jpg"
     ],
     "specifications": {
       "features": "Alexa, Smart Home Control",
@@ -406,7 +406,7 @@ export const products = [
     ],
     "releaseDate": "2023-01-07",
     "images": [
-      "/images/product-11.jpg"
+      "https://m.media-amazon.com/images/I/61L+c59GMXS._AC_UF894,1000_QL80_.jpg"
     ],
     "specifications": {
       "features": "Mechanical keys, RGB",
@@ -445,7 +445,7 @@ export const products = [
     ],
     "releaseDate": "2024-10-26",
     "images": [
-      "/images/product-12.jpg"
+      "https://cdn.mos.cms.futurecdn.net/HkdMToxijoHfz4JwUgfh3G-1200-80.jpg"
     ],
     "specifications": {
       "features": "Mechanical keys, RGB",
@@ -484,7 +484,7 @@ export const products = [
     ],
     "releaseDate": "2023-10-17",
     "images": [
-      "/images/product-13.jpg"
+      "https://hukut.com/_next/image?url=https%3A%2F%2Fcdn.hukut.com%2FHP-Spectre-x360-13-price-in-nepal-2.webp1723032794925&w=3840&q=75"
     ],
     "specifications": {
       "features": "Retina Display, M1 Chip",
@@ -523,7 +523,7 @@ export const products = [
     ],
     "releaseDate": "2022-05-31",
     "images": [
-      "/images/product-14.jpg"
+      "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-Render-of-Surface-Pro-10?fmt=png-alpha&scl=1"
     ],
     "specifications": {
       "features": "Touchscreen, Face ID",
@@ -562,7 +562,7 @@ export const products = [
     ],
     "releaseDate": "2023-05-09",
     "images": [
-      "/images/product-15.jpg"
+      "https://mdsmobile.ae/cdn/shop/articles/Untitled_design_19_800x.png?v=1698135642"
     ],
     "specifications": {
       "features": "Mechanical keys, RGB",
@@ -601,7 +601,7 @@ export const products = [
     ],
     "releaseDate": "2023-08-03",
     "images": [
-      "/images/product-16.jpg"
+      "https://lh3.googleusercontent.com/PEKFJBJgpw5eKfhfjlPOhlaS6BZonPRPHZYru-TuczyHcEwerLGu3yGRA3teNsQIi8N8LWrWIRuWPXjMfxXxzvOL6oNd0t5UCAxADWvQd8OKNFeDbkpnZC3LMMcqPebEXBC9Pv4nzNqk0ZVMVa3tcM4"
     ],
     "specifications": {
       "features": "Touchscreen, Face ID",
@@ -640,7 +640,7 @@ export const products = [
     ],
     "releaseDate": "2023-03-22",
     "images": [
-      "/images/product-17.jpg"
+      "https://static1.anpoimages.com/wordpress/wp-content/uploads/2024/02/google-pixel-fold-2-5k2.jpg"
     ],
     "specifications": {
       "features": "Mechanical keys, RGB",
@@ -679,7 +679,7 @@ export const products = [
     ],
     "releaseDate": "2024-11-21",
     "images": [
-      "/images/product-18.jpg"
+      "https://iconproaudio.com/wp-content/uploads/2024/05/HP200-MAIN.png"
     ],
     "specifications": {
       "features": "Mechanical keys, RGB",
@@ -718,7 +718,7 @@ export const products = [
     ],
     "releaseDate": "2024-10-21",
     "images": [
-      "/images/product-19.jpg"
+      "https://i.ytimg.com/vi/Ar64rJclGrI/maxresdefault.jpg"
     ],
     "specifications": {
       "features": "Bluetooth, Noise Cancelling",
@@ -757,7 +757,7 @@ export const products = [
     ],
     "releaseDate": "2023-01-06",
     "images": [
-      "/images/product-20.jpg"
+      "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6450/6450820_sd.jpg;maxHeight=640;maxWidth=550;format=webp"
     ],
     "specifications": {
       "features": "Touchscreen, Face ID",
@@ -796,7 +796,7 @@ export const products = [
     ],
     "releaseDate": "2023-01-14",
     "images": [
-      "/images/product-21.jpg"
+      "https://i.rtings.com/assets/pages/MQFiUURx/best-2-in-1-laptops-20240516-medium.jpg?format=auto"
     ],
     "specifications": {
       "features": "Mechanical keys, RGB",
@@ -835,7 +835,7 @@ export const products = [
     ],
     "releaseDate": "2025-01-27",
     "images": [
-      "/images/product-22.jpg"
+      "https://i.pcmag.com/imagery/comparisons/02Nu16iw0IzgexDt6eoDvMy-item1.fit_lim.size_1200x630.v1725915423.jpg"
     ],
     "specifications": {
       "features": "Mechanical keys, RGB",
@@ -874,7 +874,7 @@ export const products = [
     ],
     "releaseDate": "2023-01-02",
     "images": [
-      "/images/product-23.jpg"
+      "https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2018/09/21/Photos/Processed/ecodot.jpg"
     ],
     "specifications": {
       "features": "Retina Display, M1 Chip",
@@ -913,7 +913,7 @@ export const products = [
     ],
     "releaseDate": "2025-01-07",
     "images": [
-      "/images/product-24.jpg"
+      "https://cdn.shopify.com/s/files/1/0493/7636/2660/files/A2345141_Rich_image_TD01_UK_2400x2400px_V1.png?v=1723032239"
     ],
     "specifications": {
       "features": "Retina Display, M1 Chip",
@@ -952,7 +952,7 @@ export const products = [
     ],
     "releaseDate": "2022-07-22",
     "images": [
-      "/images/product-25.jpg"
+      "https://cdn.arstechnica.net/wp-content/uploads/2018/08/Main-Picture.png"
     ],
     "specifications": {
       "features": "Alexa, Smart Home Control",
@@ -991,7 +991,7 @@ export const products = [
     ],
     "releaseDate": "2024-07-24",
     "images": [
-      "/images/product-26.jpg"
+      "https://m.media-amazon.com/images/I/51as2fRh0IL.jpg"
     ],
     "specifications": {
       "features": "Bluetooth, Noise Cancelling",
@@ -1030,7 +1030,7 @@ export const products = [
     ],
     "releaseDate": "2023-01-28",
     "images": [
-      "/images/product-27.jpg"
+      "https://img.kwcdn.com/product/fancy/001fb6e7-db72-4734-9641-e36dc2666f66.jpg"
     ],
     "specifications": {
       "features": "Touchscreen, Face ID",
@@ -1069,7 +1069,7 @@ export const products = [
     ],
     "releaseDate": "2022-08-05",
     "images": [
-      "/images/product-28.jpg"
+      "https://assets2.razerzone.com/images/pnx.assets/352197395f3364e7b0adbc43fd28e979/razer-edge-og.jpg"
     ],
     "specifications": {
       "features": "Bluetooth, Noise Cancelling",
@@ -1108,7 +1108,7 @@ export const products = [
     ],
     "releaseDate": "2025-01-17",
     "images": [
-      "/images/product-29.jpg"
+      "https://i.pcmag.com/imagery/roundup-groups/051b3JvCaz7TUe9VW12gb2m-6.fit_lim.size_1050x.jpg"
     ],
     "specifications": {
       "features": "Touchscreen, Face ID",
@@ -1147,7 +1147,7 @@ export const products = [
     ],
     "releaseDate": "2024-02-02",
     "images": [
-      "/images/product-30.jpg"
+      "https://snpi.dell.com/snp/images/products/large/en-us~AB827764/AB827764.jpg"
     ],
     "specifications": {
       "features": "Touchscreen, Face ID",
@@ -1186,7 +1186,7 @@ export const products = [
     ],
     "releaseDate": "2023-12-23",
     "images": [
-      "/images/product-31.jpg"
+      "https://m.media-amazon.com/images/I/613lgXstn8L._AC_UF1000,1000_QL80_.jpg"
     ],
     "specifications": {
       "features": "Mechanical keys, RGB",
@@ -1225,7 +1225,7 @@ export const products = [
     ],
     "releaseDate": "2023-06-10",
     "images": [
-      "/images/product-32.jpg"
+      "https://m.media-amazon.com/images/I/51Uf6HL21fL.jpg"
     ],
     "specifications": {
       "features": "Mechanical keys, RGB",
@@ -1264,7 +1264,7 @@ export const products = [
     ],
     "releaseDate": "2024-10-24",
     "images": [
-      "/images/product-33.jpg"
+      "https://image.made-in-china.com/2f0j00jbhVSaocZPYC/Tablet-PC-10-Inch-Octa-Core-Mini-Laptop-Google-Play-Dual-SIM-Phone-Call-Bluetooth-WiFi-Tablets-10-1-Inch-Tablette.jpg"
     ],
     "specifications": {
       "features": "Alexa, Smart Home Control",
@@ -1303,7 +1303,7 @@ export const products = [
     ],
     "releaseDate": "2022-06-08",
     "images": [
-      "/images/product-34.jpg"
+      "https://www.asus.com/media/Odin/Websites/eg-en/ProductLine/20210418043754.jpg"
     ],
     "specifications": {
       "features": "Bluetooth, Noise Cancelling",
@@ -1342,7 +1342,7 @@ export const products = [
     ],
     "releaseDate": "2022-10-13",
     "images": [
-      "/images/product-35.jpg"
+      "https://i.dell.com/is/image/DellContent/content/dam/ss2/page-specific/category-pages/snp-category-pages/pc-accessories/keyboard-mouse-headset-mock.png?fmt=png-alpha&wid=1800&hei=800"
     ],
     "specifications": {
       "features": "Mechanical keys, RGB",
@@ -1381,7 +1381,7 @@ export const products = [
     ],
     "releaseDate": "2025-01-10",
     "images": [
-      "/images/product-36.jpg"
+      "https://i.ebayimg.com/images/g/mk8AAOSw~Whi5d7p/s-l400.jpg"
     ],
     "specifications": {
       "features": "Touchscreen, Face ID",
@@ -1420,7 +1420,7 @@ export const products = [
     ],
     "releaseDate": "2023-06-08",
     "images": [
-      "/images/product-37.jpg"
+      "https://www.androidauthority.com/wp-content/uploads/2020/05/Google-Stadia-controller-on-PC-with-games.jpg"
     ],
     "specifications": {
       "features": "Bluetooth, Noise Cancelling",
@@ -1459,7 +1459,7 @@ export const products = [
     ],
     "releaseDate": "2025-02-01",
     "images": [
-      "/images/product-38.jpg"
+      "https://knowtechie.com/wp-content/uploads/2024/08/google-pixel-9-feaure.jpg"
     ],
     "specifications": {
       "features": "Alexa, Smart Home Control",
@@ -1498,7 +1498,7 @@ export const products = [
     ],
     "releaseDate": "2024-12-09",
     "images": [
-      "/images/product-39.jpg"
+      "https://www.ubuy.com.eg/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODFGNXpTN1padkwuX0FDX1NMMTUwMF8uanBn.jpg"
     ],
     "specifications": {
       "features": "Retina Display, M1 Chip",
@@ -1537,7 +1537,7 @@ export const products = [
     ],
     "releaseDate": "2023-11-12",
     "images": [
-      "/images/product-40.jpg"
+      "https://m.media-amazon.com/images/I/5130BCxweAL._AC_UF894,1000_QL80_.jpg"
     ],
     "specifications": {
       "features": "Touchscreen, Face ID",

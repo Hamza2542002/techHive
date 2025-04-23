@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import useFilter from "../../features/products/useFilter";
 
-const filters= []
-export default function ExpandableFilter({data , title, setFilters}) {
+var filters= []
+export default function ExpandableFilter({data , title, setFilters,initialLength = 115}) {
   const [isOpen, setIsOpen] = useState(false);
   const listRef = useRef(); 
   function handleClick(b) {
@@ -12,23 +12,24 @@ export default function ExpandableFilter({data , title, setFilters}) {
       filters.push(b);
     }
     setFilters(filters);
-    // console.log(useFilter(filters));
   }
   return (
     <div className="mb-4">
+      <div className="flex justify-between items-center mb-2">
       <h4 className="font-medium mb-2">{title}</h4>
+      </div>
       <ul 
         ref={listRef}
         style={{
-          maxHeight: isOpen ? `${listRef.current?.scrollHeight}px` : '115px',
+          maxHeight: isOpen ? `${listRef.current?.scrollHeight}px` : `${initialLength}px`,
           overflow: 'hidden',
           transition: 'max-height 0.5s ease'
         }}
         className={`space-y-1 overflow-hidden transition-all duration-500`}>
         {data.map((item) => (
-          <li key={item}>
-            <input type="checkbox" id={item} className="mr-2" />
-            <label htmlFor={item} className='cursor-pointer' onClick={() => handleClick(item)}>{item}</label>
+          <li key={item.id}>
+            <input type="checkbox" id={item.name} className="mr-2" />
+            <label htmlFor={item.name} className='cursor-pointer' onClick={() => handleClick(item.name)}>{item.name}</label>
           </li>
         ))}
       </ul>

@@ -10,6 +10,7 @@ import useFilter from '../features/products/useFilter';
 import { createSearchParams, useSearchParams } from 'react-router-dom';
 import useSort from '../features/products/useSort';
 import SortBar from '../features/products/SortBar';
+import Footer from '../components/Footer';
 const carouselContent = [
   {
     image: "/images/banner-4.jpg",
@@ -44,7 +45,6 @@ export default function Products() {
       </section>
 
       <section className='container'>
-
         <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
           <h1 className="text-3xl font-bold text-gray-800">All Products</h1>
           <SortBar />
@@ -66,6 +66,10 @@ export default function Products() {
           </div>
         </main>
       </section>
+
+      <footer className="bg-gray-900 text-white py-10 mt-10">
+        <Footer />
+      </footer>
     </div>
   )
 }

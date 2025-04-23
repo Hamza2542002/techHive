@@ -5,8 +5,8 @@ export default function ProductCard({product}) {
   return (
     <div className="bg-white border border-borderColor p-4 rounded-xl flex flex-col justify-between">
       <div>
-        <Link to={`/products/${product.id}`} className="block mb-2">
-          <img src={product.img} alt="" className="w-full h-40 object-cover rounded-lg mb-2" />
+        <Link to={`/products/${product.id}`} className="mb-2 h-52 max-h-52 flex items-center justify-center">
+          <img src={product.images[0]} alt="" className="w-full h-52  object-cover rounded-lg mb-2" />
         </Link>
         <h3 className="font-bold text-textPrimary">{product.name}</h3>
         <h3 className="font-semibold text-textPrimary">{product.brand}</h3>
@@ -21,10 +21,10 @@ export default function ProductCard({product}) {
       <div>
         <p className="text-accent font-bold">${product.price}</p>
         <div className='flex items-center gap-2'>  
-          <button className="mt-2 px-4 py-1 text-sm bg-red-500 text-white rounded-xl opacity-100 hover:bg-opacity-90 transition duration-300 ease-in-out">
+          {/* <button className="mt-2 px-4 py-1 text-sm bg-red-500 text-white rounded-xl opacity-100 hover:bg-opacity-90 transition duration-300 ease-in-out">
             Add to Wishlist
-          </button>
-          <button className="mt-2 px-4 py-1 text-sm bg-primary text-white rounded-xl opacity-100 hover:bg-opacity-90 transition duration-300 ease-in-out">
+          </button> */}
+          <button className="mt-2 px-4 py-1 text-sm bg-primary text-white rounded-xl opacity-100 hover:bg-white hover:text-primary border-2 border-primary transition duration-300 ease-in-out">
             Add to Cart
           </button>
         </div>
