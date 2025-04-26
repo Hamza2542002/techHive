@@ -3,11 +3,15 @@ import { Link, useParams } from "react-router-dom";
 import { products } from "../data/prodcuts";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import UpdateItemQuantity from "../features/cart/UpdateItemQuantity";
+import { useCart } from "../features/cart/CartContext";
+import AddToCart from "../features/cart/AddToCart";
 
 export default function ProductDetails() {
   const { id } = useParams();
+  const { cart, dispatch } = useCart();
   const [product,setProduct] = useState(products.find((p) => p.id === parseInt(id)));
-
+  const isInCart = cart.filter((item) => item.id === product.id);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [product]);
@@ -77,9 +81,8 @@ export default function ProductDetails() {
             </ul>
           </div>
 
-          <button className="bg-primary text-white px-5 py-1 rounded-xl hover:bg-white hover:text-primary border-2 border-primary transition">
-            Add to Cart
-          </button>
+        <AddToCart product={product} />
+        
         </div>
       </div>
 
