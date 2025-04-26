@@ -6,14 +6,14 @@ import ProductSlider from "../components/ProductSlider";
 import Footer from "../components/Footer";
 const carouselContent = [
   {
-    image: "/images/banner-4.jpg",
+    image: "https://d13kjxnqnhcmn2.cloudfront.net/AcuCustom/Sitename/DAM/085/Gaming_for_Good_2025_-_Main1.jpg",
     title: "Explore the Latest Gaming",
     subtitle: "Perfect Gaming Tools For Great Experience"
   },
   {
-    image: "/images/banner-2.jpg",
-    title: "Unbeatable Deals",
-    subtitle: "Discounts up to 50% on top tech"
+    image: "https://bernardmarr.com/wp-content/uploads/2024/12/AdobeStock_556468321-scaled.jpeg",
+    title: "Smart Home Devices",
+    subtitle: "Upgrade your home with smart devices"
   },
   {
     image: "/images/banner-3.jpg",

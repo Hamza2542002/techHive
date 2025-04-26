@@ -8,6 +8,7 @@ import { faFacebookF, faInstagram, faXTwitter } from '@fortawesome/free-brands-s
 import ServiceSection from '../components/ServiceSection'
 import CategorySection from '../components/CategorySection'
 import Footer from '../components/Footer'
+import Featured from '../components/Featured'
 
 export default function HomePage() {
     const carouselContent = [
@@ -106,6 +107,10 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* New Arrivals */}
+      <section className="container py-10">
+        <Featured />
+      </section>
       {/* What Client Says */}
       <section className="container py-10">
         <div className='flex justify-between items-center mb-6'>
