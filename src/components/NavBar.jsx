@@ -30,29 +30,15 @@ export default function NavBar() {
                 <li className='w-full rounded-lg'><Link to="/products" className='text-gray-500 lg:bg-transparent rounded-lg block py-2 lg:hover:bg-transparent hover:bg-gray-100 hover:text-gray-900 font-semibold px-4 dark:hover:text-white duration-200'>Products</Link></li>
                 <li className='w-full rounded-lg'><Link to="/categories" className='text-gray-500 lg:bg-transparent rounded-lg block py-2 lg:hover:bg-transparent hover:bg-gray-100 hover:text-gray-900 font-semibold px-4 dark:hover:text-white duration-200'>Categories</Link></li>
                 <li className='w-full rounded-lg'><Link to="/" className='text-gray-500 lg:bg-transparent rounded-lg block py-2 lg:hover:bg-transparent hover:bg-gray-100 hover:text-gray-900 font-semibold px-4 dark:hover:text-white duration-200'>Blogs</Link></li>
-                <li className='text-gray-500 w-full py-2 relative z-0 group font-semibold px-4 duration-200'>
-                  <p  className='flex items-center gap-1 w-24 hover:text-gray-900 group-hover:text-gray-900 dark:hover:text-white relative z-10 cursor-pointer'> Quik Links <FontAwesomeIcon icon={faSortDown} className='group-hover:-rotate-180 duration-200' />   </p>
-                  <ul className='bg-white w-full dark:bg-gray-900 px-2 py-2 rounded-lg text-start opacity-0 absolute top-full -translate-y-12 lg:w-52 left-0 group-hover:block group-hover:opacity-100 hover:opacity-100 duration-200'>
-                    <li className='text-gray-500 cursor-pointer hover:text-gray-900 hover:bg-[#f42c3733] font-semibold px-2 py-2 dark:hover:text-white duration-200 rounded-lg my-1 opacity-0'>Trending Products</li>
-                    <li className='text-gray-500 cursor-pointer hover:text-gray-900 hover:bg-[#f42c3733] font-semibold px-2 py-2 dark:hover:text-white duration-200 rounded-lg my-1' ><Link to={`/products&tag=trending`} > Trending Products </Link></li>
-                    <li className='text-gray-500 cursor-pointer hover:text-gray-900 hover:bg-[#f42c3733] font-semibold px-2 py-2 dark:hover:text-white duration-200 rounded-lg my-1'><Link to={`/products&tag=bestSelling`} > Best Selling </Link></li>
-                    <li className='text-gray-500 cursor-pointer hover:text-gray-900 hover:bg-[#f42c3733] font-semibold px-2 py-2 dark:hover:text-white duration-200 rounded-lg my-1'><Link to={`/products&tag=topRated`} > Top Rated  </Link></li>
-                  </ul>
-                </li>
               </ul>
             </div>
           </div>
           <div className='flex gap-3 items-center'>
             <SerachFrom />
-            
             <Link to="/cart" className='relative'>
               <p className='absolute top-0 right-0 -translate-y-3 translate-x-2 bg-red-500 rounded-full w-4 h-4 text-sm text-white flex justify-center items-center'>{cart.length}</p>
               <FontAwesomeIcon icon={faCartShopping} className='block right-0 text-gray-500 dark:bg-gray-900 font-bold' />
             </Link>
-            {/* <button>
-              <img onClick={()=> setTheme('light')} className='w-12 hidden dark:block duration-75' src="/assets/dark-mode-button-85jBkhOs.png" alt="" />
-              <img onClick={()=> setTheme('dark')} className='w-12 block dark:hidden duration-75' src="/assets/light-mode-button-X4OXHFfW.png" alt="" />
-            </button> */}
           </div>
         </div>
       </div>
