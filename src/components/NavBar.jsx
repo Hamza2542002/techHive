@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faCartShopping, faMagnifyingGlass, faSortDown } from '@fortawesome/free-solid-svg-icons'
 import { useCart } from '../features/cart/CartContext.jsx';
+import SerachFrom from './SerachFrom.jsx';
+import SearchResult from './SearchResult.jsx';
 export default function NavBar() {
   const {cart} = useCart();
 
@@ -41,11 +43,8 @@ export default function NavBar() {
             </div>
           </div>
           <div className='flex gap-3 items-center'>
-            <div className="search-section relative flex items-center gap-2">
-              <input type="checkbox" className='peer' name="" hidden id="toggle-search" />
-              <input type="text" className='peer-checked:inline-block hidden lg:inline-block rounded-full w-10 lg:w-32  px-4 py-1 ring-gray-500 ring-1' placeholder='Search'/>
-              <label for='toggle-search' className='inline-block lg:hidden peer-checked:hiddeen right-0 text-gray-500 dark:bg-gray-900 hover:text-primary font-bold'><FontAwesomeIcon icon={faMagnifyingGlass} /></label>
-            </div>
+            <SerachFrom />
+            
             <Link to="/cart" className='relative'>
               <p className='absolute top-0 right-0 -translate-y-3 translate-x-2 bg-red-500 rounded-full w-4 h-4 text-sm text-white flex justify-center items-center'>{cart.length}</p>
               <FontAwesomeIcon icon={faCartShopping} className='block right-0 text-gray-500 dark:bg-gray-900 font-bold' />
