@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import AddToCart from '../cart/AddToCart';
+import AddToComparison from '../Comparison/AddToComparison';
+import { useComparison } from '../Comparison/CompareContext';
 
 export default function ProductCard({product}) {
   return (
@@ -25,6 +27,7 @@ export default function ProductCard({product}) {
           View Details
         </Link>
         <AddToCart product={product} />
+        <AddToComparison product={product} />
       </div>
     </div>
   )

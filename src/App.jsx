@@ -8,22 +8,27 @@ import Products from "./pages/Products"
 import NotFound from "./pages/NotFound"
 import { CartProvider } from "./features/cart/CartContext"
 import Contact from "./pages/Contact"
+import Compare from "./features/Comparison/Compare"
+import { ComparisonProvider } from "./features/Comparison/CompareContext"
 function App() {
 
   return (
     <CartProvider>
-    <Router>
-      <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/categories" element={<CategoriesPage />} />
-          <Route path="/categories/:name" element={<CategoryPage />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/products/:id" element={<ProductDetails />} />
-          <Route path="/cart" element={ <CartPage />} />
-          <Route path="/contact" element={ <Contact />} />
-        <Route path="/*" element={<NotFound />} />
-      </Routes>
-    </Router>
+      <ComparisonProvider>
+      <Router>
+        <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/categories" element={<CategoriesPage />} />
+            <Route path="/categories/:name" element={<CategoryPage />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path="/cart" element={ <CartPage />} />
+            <Route path="/contact" element={ <Contact />} />
+            <Route path="/compare" element={ <Compare />} />
+          <Route path="/*" element={<NotFound />} />
+        </Routes>
+      </Router>
+      </ComparisonProvider>
     </CartProvider>
   )
 }
