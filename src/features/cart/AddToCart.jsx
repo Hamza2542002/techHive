@@ -6,7 +6,7 @@ export default function AddToCart({product}) {
   const {cart , dispatch} = useCart();
   const isInCart = cart.filter((item) => item.id === product.id);
   return (
-    <div className='flex items-center gap-2 mt-4'>  
+    <div className='flex items-center gap-2 mt-2'>  
       {isInCart.length === 0 ?  <button 
       onClick={() => dispatch(
         {

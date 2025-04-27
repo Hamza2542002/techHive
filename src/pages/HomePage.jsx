@@ -9,9 +9,10 @@ import ServiceSection from '../components/ServiceSection'
 import CategorySection from '../components/CategorySection'
 import Footer from '../components/Footer'
 import Featured from '../components/Featured'
-
+import { products } from '../data/prodcuts.js'
+import ProductCard from '../features/products/ProductCard.jsx'
 export default function HomePage() {
-    const carouselContent = [
+  const carouselContent = [
       {
         image: "/images/banner-1.jpg",
         title: "Explore the Latest Gadgets",
@@ -28,12 +29,6 @@ export default function HomePage() {
         subtitle: "Make your home smarter with our picks"
       }
     ];
-  const products = [
-    { id: 1, name: "Earphone", price: 99.99, image: "/images/earphone.png" },
-    { id: 2, name: "Headphone", price: 89.99, image: "/images/HEADPHONE.png" },
-    { id: 3, name: "Laptop", price: 79.99, image: "/images/LAPTOPS.png" },
-    { id: 4, name: "Smart Watch", price: 69.99, image: "/images/smart-watch.png" }
-  ];
   return (
     <div className="bg-background text-textPrimary min-h-screen">
       {/* Nav bar */}
@@ -61,26 +56,8 @@ export default function HomePage() {
           <Link to={"/products"} className='hover:text-gray-900 duration-200'>Show All</Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product) => (
-            <Link key={product.id} to={`/products/${product.id}`}>
-              <div
-                key={product.id}
-                className="bg-white rounded-2xl shadow p-4 hover:shadow-lg border border-borderColor duration-300"
-                >
-                <div className='flex justify-center items-center'>
-                  <img
-                    src={product.image}
-                    alt="product"
-                    className="w-[268px] h-[268px] object-cover rounded-lg mb-2"
-                  />
-                </div>
-                <h3 className="font-semibold text-textPrimary">{product.name}</h3>
-                <p className="text-accent font-bold">${product.price}</p>
-                <button className="mt-2 px-4 py-1 w-fit text-sm bg-primary text-white rounded-xl hover:bg-accent transition duration-200">
-                  Add to Cart
-                </button>
-              </div>
-            </Link>
+          {products.slice(0,4).map((product) => (
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </section>
@@ -111,6 +88,7 @@ export default function HomePage() {
       <section className="container py-10">
         <Featured />
       </section>
+      
       {/* What Client Says */}
       <section className="container py-10">
         <div className='flex justify-between items-center mb-6'>

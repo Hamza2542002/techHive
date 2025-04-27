@@ -37,7 +37,7 @@ export default function CategoriesPage() {
           {categories.map((cat) => (
             <Link
             key={cat.id}
-              to={`/category/${cat.name}`}
+              to={`${cat.name}`}
               className="bg-white rounded-2xl shadow hover:shadow-lg p-6 flex items-center justify-center text-center border border-borderColor transition"
               >
               <span className="font-medium text-textPrimary text-lg">{cat.name}</span>
