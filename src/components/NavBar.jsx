@@ -29,7 +29,7 @@ export default function NavBar() {
                 </li>
                 <li className='w-full rounded-lg'><Link to="/products" className='text-gray-500 lg:bg-transparent rounded-lg block py-2 lg:hover:bg-transparent hover:bg-gray-100 hover:text-gray-900 font-semibold px-4 dark:hover:text-white duration-200'>Products</Link></li>
                 <li className='w-full rounded-lg'><Link to="/categories" className='text-gray-500 lg:bg-transparent rounded-lg block py-2 lg:hover:bg-transparent hover:bg-gray-100 hover:text-gray-900 font-semibold px-4 dark:hover:text-white duration-200'>Categories</Link></li>
-                <li className='w-full rounded-lg'><Link to="/" className='text-gray-500 lg:bg-transparent rounded-lg block py-2 lg:hover:bg-transparent hover:bg-gray-100 hover:text-gray-900 font-semibold px-4 dark:hover:text-white duration-200'>Blogs</Link></li>
+                <li className='w-full rounded-lg'><Link to="/contact" className='text-gray-500 lg:bg-transparent rounded-lg block py-2 lg:hover:bg-transparent hover:bg-gray-100 hover:text-gray-900 font-semibold px-4 dark:hover:text-white duration-200'>Contact</Link></li>
               </ul>
             </div>
           </div>

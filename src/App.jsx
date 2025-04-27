@@ -7,6 +7,7 @@ import CategoriesPage from "./pages/CategoriesPage"
 import Products from "./pages/Products"
 import NotFound from "./pages/NotFound"
 import { CartProvider } from "./features/cart/CartContext"
+import Contact from "./pages/Contact"
 function App() {
 
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/cart" element={ <CartPage />} />
+          <Route path="/contact" element={ <Contact />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
     </Router>
