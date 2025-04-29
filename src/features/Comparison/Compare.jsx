@@ -13,7 +13,7 @@ export default function Compare() {
       <NavBar />
     <div className="container py-10 min-h-[561px]">
       <h1 className="text-3xl font-bold mb-6 text-gray-800">Compare Products</h1>
-      {products.length > 2 ? (
+      {products.length >= 2 ? (
         <>
           <div className="overflow-x-auto shadow-md rounded-lg">
             <table className="min-w-full text-left border-collapse">
