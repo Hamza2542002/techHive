@@ -21,7 +21,7 @@ function Featured() {
         <div className="flex-grow flex flex-wrap flex-col gap-4">
           <div className="bg-black p-6 pb-0 relative flex-grow rounded-md flex justify-end">
             <img
-              src="/public/images/hero_1.png"
+              src="/images/hero_1.png"
               alt=""
             />
             <div className="details absolute bottom-6 left-6 text-white flex flex-col gap-4">
@@ -37,7 +37,7 @@ function Featured() {
           <div className="flex flex-wrap gap-4">
             <div className="bg-black p-6 pb-0 relative flex-grow rounded-md flex justify-center">
               <img
-                src="/public/images/featured-3.png"
+                src="/images/featured-3.png"
                 alt=""
                 style={{ filter: "drop-shadow(#ffffff70 0px 0px 80px)" }}
               />
@@ -51,7 +51,7 @@ function Featured() {
             </div>
             <div className="bg-black p-6 pb-0 relative flex-grow rounded-md flex justify-center w-[218px] h-auto">
               <img
-                src="/public/images/specialOffer.png"
+                src="/images/specialOffer.png"
                 alt=""
                 style={{ filter: "drop-shadow(#ffffff70 0px 0px 80px)" }}
               />
