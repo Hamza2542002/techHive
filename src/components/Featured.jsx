@@ -7,7 +7,7 @@ function Featured() {
       </div>
       <div className="flex flex-wrap gap-4">
         <div className="bg-black max-h-[600px] p-6 pb-0 relative flex-grow rounded-md flex items-end">
-          <img src="/public/images/featured-1.png" alt="" />
+          <img src="/images/featured-1.png" alt="" />
           <div className="details absolute bottom-6 left-6 text-white flex flex-col gap-4">
             <h2 className="font-semibold">PlayStation 5</h2>
             <p className="font-normal">
