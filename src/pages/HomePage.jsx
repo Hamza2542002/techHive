@@ -11,6 +11,7 @@ import Footer from '../components/Footer'
 import Featured from '../components/Featured'
 import { products } from '../data/prodcuts.js'
 import ProductCard from '../features/products/ProductCard.jsx'
+import ShowComparison from '../features/Comparison/ShowComparison.jsx'
 export default function HomePage() {
   const carouselContent = [
       {
@@ -126,8 +127,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      <ShowComparison />
       {/* Sponsers */}
-      <section className="bg-gray-200 py-10 hidden md:block">
+      <section className="bg-gray-200 py-10 mt-10 hidden md:block">
         <div className="container">
           <div className="hidden md:flex justify-evenly items-center ">
             {[1, 2, 3, 4, 5].map((id) => (
@@ -141,6 +143,7 @@ export default function HomePage() {
       <footer className="bg-gray-900 text-white py-10">
         <Footer />
       </footer>
+
     </div>
   )
 }

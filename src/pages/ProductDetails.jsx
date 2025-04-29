@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import UpdateItemQuantity from "../features/cart/UpdateItemQuantity";
 import { useCart } from "../features/cart/CartContext";
 import AddToCart from "../features/cart/AddToCart";
+import AddToComparison from "../features/Comparison/AddToComparison";
+import ShowComparison from "../features/Comparison/ShowComparison";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -82,7 +84,7 @@ export default function ProductDetails() {
           </div>
 
         <AddToCart product={product} />
-        
+        <AddToComparison product={product} />
         </div>
       </div>
 
@@ -101,7 +103,6 @@ export default function ProductDetails() {
         </div>
       </div>
 
-
       <div className="container mt-16">
         <h2 className="text-3xl font-semibold mb-4">Related Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -110,7 +111,7 @@ export default function ProductDetails() {
             .filter(Boolean)
             .map((related) => (
               <div
-                key={related.id}
+              key={related.id}
                 className="bg-white rounded-2xl shadow p-4 hover:shadow-lg border border-borderColor"
               >
                 <img
@@ -128,6 +129,7 @@ export default function ProductDetails() {
         </div>
       </div>
 
+      <ShowComparison /> 
       <footer className="bg-gray-900 text-white py-10 mt-10">
         <Footer />
       </footer>

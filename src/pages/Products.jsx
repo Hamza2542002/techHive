@@ -10,6 +10,7 @@ import useFilter from '../features/products/useFilter';
 import useSort from '../features/products/useSort';
 import SortBar from '../features/products/SortBar';
 import Footer from '../components/Footer';
+import ShowComparison from '../features/Comparison/ShowComparison';
 const carouselContent = [
   {
     image: "/images/banner-4.jpg",
@@ -65,10 +66,12 @@ export default function Products() {
           </div>
         </main>
       </section>
+      <ShowComparison />
 
       <footer className="bg-gray-900 text-white py-10 mt-10">
         <Footer />
       </footer>
+
     </div>
   )
 }

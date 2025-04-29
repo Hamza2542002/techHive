@@ -17,7 +17,7 @@ export default function CartPage() {
     <div className="min-h-screen bg-gray-50 text-gray-800">
       <NavBar />
       <div className="container mx-auto py-16 px-4 lg:px-0 relative z-50 min-h-[679px]">
-        <h1 className="text-4xl font-extrabold mb-10 text-center">Your Cart</h1>
+        <h1 className="text-4xl font-bold mb-10 text">Your Cart</h1>
 
         {cart.length === 0 ? (
           <div className="text-center space-y-6">

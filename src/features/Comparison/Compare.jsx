@@ -3,6 +3,8 @@ import { useComparison } from './CompareContext.jsx';
 import NavBar from '../../components/NavBar.jsx';
 import Footer from '../../components/Footer.jsx';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
 
 export default function Compare() {
   const { products , dispatch } = useComparison();
@@ -87,8 +89,8 @@ export default function Compare() {
           </button>
         </>
       ) : (
-        <div className="text-center py-8 text-gray-500">
-          <p>No products selected for comparison</p>
+        <div className="text-center py-8 text-gray-900">
+          <p>No products selected for comparison <FontAwesomeIcon className='ms-2' icon={faBasketShopping} /></p>
           <Link
             to={"/products"}
             className="mt-6 inline-block bg-primary text-white py-1 px-5 rounded-lg hover:text-primary hover:bg-transparent border-2 border-primary transition-colors duration-200"

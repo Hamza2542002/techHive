@@ -5,8 +5,6 @@ const initialState= {products : []};
 const CompareContext = createContext();
 // action => add , delete , clear
 function comparisonReducer(state, action){
-  console.log("action", action);
-  console.log("state", state);
   switch (action.type) {
     case "item/add":
       return {
