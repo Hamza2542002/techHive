@@ -14,9 +14,11 @@ export default function CartPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
+    <div className="min-h-screen flex justify-between flex-col bg-gray-50 text-gray-800">
+      <div>
+
       <NavBar />
-      <div className="container mx-auto py-16 px-4 lg:px-0 relative  min-h-[679px]">
+      <div className="container py-16 relative  min-h-[679px]">
         <h1 className="text-4xl font-bold mb-10 text">Your Cart</h1>
 
         {cart.length === 0 ? (
@@ -76,6 +78,8 @@ export default function CartPage() {
           </div>
         )}
       </div>
+      </div>
+
       <footer className="bg-gray-900 text-white py-10">
         <Footer />
       </footer>
