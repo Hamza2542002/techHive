@@ -12,24 +12,24 @@ import Featured from '../components/Featured'
 import { products } from '../data/prodcuts.js'
 import ProductCard from '../features/products/ProductCard.jsx'
 import ShowComparison from '../features/Comparison/ShowComparison.jsx'
+const carouselContent = [
+    {
+      image: "/images/banner-1.jpg",
+      title: "Explore the Latest Gadgets",
+      subtitle: "From smartphones to smart homes"
+    },
+    {
+      image: "/images/banner-2.jpg",
+      title: "Unbeatable Deals",
+      subtitle: "Discounts up to 50% on top tech"
+    },
+    {
+      image: "/images/banner-3.jpg",
+      title: "Smart Home Essentials",
+      subtitle: "Make your home smarter with our picks"
+    }
+  ];
 export default function HomePage() {
-  const carouselContent = [
-      {
-        image: "/images/banner-1.jpg",
-        title: "Explore the Latest Gadgets",
-        subtitle: "From smartphones to smart homes"
-      },
-      {
-        image: "/images/banner-2.jpg",
-        title: "Unbeatable Deals",
-        subtitle: "Discounts up to 50% on top tech"
-      },
-      {
-        image: "/images/banner-3.jpg",
-        title: "Smart Home Essentials",
-        subtitle: "Make your home smarter with our picks"
-      }
-    ];
   return (
     <div className="bg-background text-textPrimary min-h-screen">
       {/* Nav bar */}
