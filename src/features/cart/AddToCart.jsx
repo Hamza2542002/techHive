@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import UpdateItemQuantity from './UpdateItemQuantity'
 import { useCart } from './CartContext';
+import Button from '../../components/Button';
 
 export default function AddToCart({product}) {
   const {cart , dispatch} = useCart();
   const isInCart = cart.filter((item) => item.id === product.id);
   return (
     <div className='flex items-center gap-2 mt-2'>  
-      {isInCart.length === 0 ?  <button 
+      {isInCart.length === 0 ?  <Button 
       onClick={() => dispatch(
         {
           type:"item/add" , 
@@ -19,9 +20,10 @@ export default function AddToCart({product}) {
             quantity : 1,
           }}
       )}
-      className="mt-2 px-4 py-1 text-sm bg-primary text-white rounded-xl opacity-100 hover:bg-white hover:text-primary border-2 border-primary transition duration-300 ease-in-out">
-        Add to Cart
-      </button> :
+      variation="primary"
+      >
+      Add To Cart
+      </Button> :
         <UpdateItemQuantity item={isInCart[0]} />
       }
     </div>

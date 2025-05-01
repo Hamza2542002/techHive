@@ -1,5 +1,6 @@
 import React from 'react'
 import { useComparison } from './CompareContext';
+import Button from '../../components/Button';
 
 export default function AddToComparison({product}) {
   const { products, dispatch } = useComparison();
@@ -11,16 +12,16 @@ export default function AddToComparison({product}) {
     dispatch({ type: "item/delete", payload: product });
   }
 
-  return (isInComparison ?  <button
+  return (isInComparison ?  <Button
       onClick={handleAddToComparison}
-      className="text-sm bg-primary hover:bg-transparent hover:text-primary border-2 border-primary  text-white px-3 py-1 rounded-xl hover:bg-accent mt-2 duration-200"
+      variation="primary"
     >
       Compare
-    </button>: <button
+    </Button>: <Button
       onClick={handleRemoveFromComparison}
-      className="text-sm bg-danger border-2 border-danger mt-2 text-white px-3 py-1 rounded-xl hover:bg-transparent hover:text-danger duration-200"
-    >
+      variation="danger"    
+      >
       Remove from Comparison
-    </button>
+    </Button>
   )
 }
