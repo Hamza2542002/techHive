@@ -9,14 +9,12 @@ function useOutClick(onClose, handleCapture = true) {
         onClose();
       }
     };
-
     document.addEventListener("click", handleClick, handleCapture);
 
     return ()=>{
       document.removeEventListener("click", handleClick, handleCapture);
     }
   },[onClose, handleCapture]);
-
   return ref;
 }
 

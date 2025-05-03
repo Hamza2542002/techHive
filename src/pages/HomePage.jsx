@@ -11,6 +11,7 @@ import ShowComparison from '../features/Comparison/ShowComparison.jsx'
 import SectionHeader from '../components/SectionHeader.jsx'
 import OfferSection from '../components/OfferSection.jsx'
 import Testmonail from '../components/Testmonail.jsx'
+import SearchModal from '../components/SearchModal.jsx'
 const carouselContent = [
     {
       image: "/images/banner-1.jpg",
@@ -33,7 +34,6 @@ export default function HomePage() {
     <div className="bg-background text-textPrimary min-h-screen">
       {/* Nav bar */}
       <NavBar />
-
       {/* slider */}
       <section className="my-10">
         <ProductSlider content={carouselContent} />
