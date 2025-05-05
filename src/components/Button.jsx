@@ -11,13 +11,14 @@ const sizes = {
 const modes = {
   fill: "w-full"
 }
-export default function Button({children, onClick, variation = "primary" , type = "button" , size = "md" , mode = "fill"}) {
+export default function Button({children, onClick, variation = "primary" , type = "button" , size = "md" , mode = "fill", pending = false}) {
   return (
     <button
-      className={`mt-2 rounded-lg text-white  opacity-100 border-2 transition duration-300 ease-in-out 
+      className={`rounded-lg text-white  opacity-100 border-2 transition duration-300 ease-in-out 
         ${variations[variation]} ${sizes[size]} ${modes[mode]}`}
       onClick={onClick}
       type={type}
+      disabled={pending}
     >{children}</button>
   )
 }

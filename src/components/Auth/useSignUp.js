@@ -1,4 +1,4 @@
-function signUp({
+export function signUp({
   name,
   email,
   password,
@@ -13,6 +13,16 @@ function signUp({
   if (password !== confirmPassword) {
     return { error: "Passwords do not match" };
   }
-  
-  return { success: true, token: "fake-jwt-token" };
+  fetch('https://data-acyk.onrender.com/users', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    firstName: name,
+    username : email,
+    password,
+    })
+  })
+  .then(res => res.json())
+  .then(data => console.log(data));
+  return { success: true, data : data, token: "fake-jwt-token" };
 }

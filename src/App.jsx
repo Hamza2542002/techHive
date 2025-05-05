@@ -12,28 +12,31 @@ import Compare from "./features/Comparison/Compare"
 import { ComparisonProvider } from "./features/Comparison/CompareContext"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
+import { AuthProvider } from "./components/Auth/AuthContext"
 function App() {
 
   return (
-    <CartProvider>
-      <ComparisonProvider>
-      <Router>
-        <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/categories" element={<CategoriesPage />} />
-            <Route path="/categories/:name" element={<CategoryPage />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/products/:id" element={<ProductDetails />} />
-            <Route path="/cart" element={ <CartPage />} />
-            <Route path="/contact" element={ <Contact />} />
-            <Route path="/compare" element={ <Compare />} />
-            <Route path="/login" element={ <Login />} />
-            <Route path="/signup" element={ <Signup />} />
-          <Route path="/*" element={<NotFound />} />
-        </Routes>
-      </Router>
-      </ComparisonProvider>
-    </CartProvider>
+    <AuthProvider>
+      <CartProvider>
+        <ComparisonProvider>
+        <Router>
+          <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/categories" element={<CategoriesPage />} />
+              <Route path="/categories/:name" element={<CategoryPage />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/products/:id" element={<ProductDetails />} />
+              <Route path="/cart" element={ <CartPage />} />
+              <Route path="/contact" element={ <Contact />} />
+              <Route path="/compare" element={ <Compare />} />
+              <Route path="/login" element={ <Login />} />
+              <Route path="/signup" element={ <Signup />} />
+            <Route path="/*" element={<NotFound />} />
+          </Routes>
+        </Router>
+        </ComparisonProvider>
+      </CartProvider>
+    </AuthProvider>
   )
 }
 

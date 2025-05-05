@@ -5,6 +5,7 @@ import NavLinks from './NavLinks.jsx';
 import CartIcon from '../features/cart/CartIcon.jsx';
 import ToggleNavLinks from './ToggleNavLinks.jsx';
 import useOutClick from '../hooks/useOutClick.js';
+import User from './User.jsx';
 
 export default function NavBar() {
   const toggleRef = useRef(null);
@@ -28,6 +29,7 @@ export default function NavBar() {
           <div className='flex gap-3 items-center justify-end grow'>
             <SerachFrom />
             <CartIcon />
+            <User />
           </div>
         </div>
       </div>
