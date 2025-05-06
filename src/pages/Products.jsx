@@ -9,6 +9,8 @@ import Footer from '../components/Footer';
 import ShowComparison from '../features/Comparison/ShowComparison';
 import ProductList from '../features/products/PeoductList.jsx';
 import Filtration from '../components/Filters/Filtration.jsx';
+import { useAuth } from '../components/Auth/AuthContext.jsx';
+import Loader from '../components/Loader.jsx';
 
 const carouselContent = [
   {
@@ -28,6 +30,9 @@ const carouselContent = [
   }
 ];
 export default function Products() {
+  const {isLoading} = useAuth();
+  if(isLoading) return <Loader />;
+
   const [filteredProducts, setfilteredProducts] = useState(products);
   const sortedProducts = useSort(filteredProducts);
 

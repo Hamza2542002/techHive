@@ -15,11 +15,13 @@ export default function AddToComparison({product}) {
   return (isInComparison ?  <Button
       onClick={handleAddToComparison}
       variation="primary"
+      mode=''
     >
       Compare
     </Button>: <Button
       onClick={handleRemoveFromComparison}
-      variation="danger"    
+      variation="danger"
+      mode=''    
       >
       Remove from Comparison
     </Button>

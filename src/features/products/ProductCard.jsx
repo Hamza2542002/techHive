@@ -23,11 +23,13 @@ export default function ProductCard({product}) {
       </div>
       <div>
         <p className="text-accent font-bold">${product.price}</p>
-        <Link to={`/products/${product.id}`} className='text-md underline text-primary'>
+        <Link to={`/products/${product.id}`} className='text-sm hover:underline text-primary'>
           View Details
         </Link>
+        <div className='flex flex-col justify-between mt-2 gap-2'>
         <AddToCart product={product} />
         <AddToComparison product={product} />
+        </div>
       </div>
     </div>
   )

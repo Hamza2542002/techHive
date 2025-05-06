@@ -68,12 +68,14 @@ function AuthProvider({ children }) {
 
   useEffect(function(){
     async function fetchUser(){
+      dispatch({ type: "waiting", payload: true });
       const storedUserId = localStorage.getItem("userId");
       if (storedUserId) {
         const user = await getUserAsync(storedUserId);
         console.log("Stored User:", user);
         dispatch({ type: "user/loaded", payload: user });
       }
+      dispatch({ type: "waiting", payload: false });
     }
     fetchUser();
   } 
@@ -94,6 +96,7 @@ function AuthProvider({ children }) {
   }
 
   function logout() {
+    localStorage.removeItem("userId");
     dispatch({ type: "user/logout" });
   }
 

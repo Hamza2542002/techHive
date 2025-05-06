@@ -22,7 +22,7 @@ export default function ProductDetails() {
   return (
     <div className="min-h-screen bg-gray-50  ">
       <NavBar />
-      <div className="container py-10 relative z-50">
+      <div className="container py-10 relative z-0">
         
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto bg-white p-6 rounded-2xl shadow">
         {/* Image Section */}
@@ -70,8 +70,10 @@ export default function ProductDetails() {
               ))}
             </ul>
           </div>
-        <AddToCart product={product} />
-        <AddToComparison product={product} />
+        <div className='flex flex-col justify-between mt-2 gap-2'>
+          <AddToCart product={product} />
+          <AddToComparison product={product} />
+        </div>
         </div>
       </div>
       {/* Reviews */}

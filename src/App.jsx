@@ -13,6 +13,7 @@ import { ComparisonProvider } from "./features/Comparison/CompareContext"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import { AuthProvider } from "./components/Auth/AuthContext"
+import Profile from "./pages/ProfilePage"
 function App() {
 
   return (
@@ -31,6 +32,7 @@ function App() {
               <Route path="/compare" element={ <Compare />} />
               <Route path="/login" element={ <Login />} />
               <Route path="/signup" element={ <Signup />} />
+              <Route path="/profile" element={ <Profile />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </Router>
