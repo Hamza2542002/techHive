@@ -1,25 +1,31 @@
 import React, { useEffect, useState } from 'react'
 import useSearch from '../hooks/useSearch';
 import { Link } from 'react-router-dom';
+import useOutClick from '../hooks/useOutClick';
 
 export default function SearchResult({search}) {
   const [products, setProducts] = useState([]);
   const [brands, setBrands] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [showResult , setShowResult] = useState(true);
   useEffect(() => {
     const { filteredProducts, filteredBrands, filteredCategories } = useSearch(search);
     setProducts(filteredProducts);
     setBrands(filteredBrands);
     setCategories(filteredCategories);
+    setShowResult(true);
   }, [search])
-  console.log(products, brands, categories);
+  const elementRef = useOutClick(()=>{setShowResult(false)});
+
   if(products.length === 0 && brands.length === 0 && categories.length === 0) 
-    return <div className='py-2 absolute top-full left-0 translate-y-4 w-full bg-white z-10 rounded-lg rounded-t-none flex items-center justify-center'>
-      <p className='text-gray-600 font-medium'>NO RESULT</p>
-    </div>
+    return <>
+      {showResult && <div ref={elementRef} className='py-2 absolute top-full left-0 translate-y-4 w-full bg-white rounded-lg flex items-center justify-center'>
+        <p className='text-gray-600 font-medium'>NO RESULT</p>
+      </div>}
+    </>
   return (
-    <div className='py-2 absolute top-full left-0 translate-y-4 w-full max-h-80 overflow-y-scroll overflow-x-hidden bg-white z-10 rounded-lg rounded-t-none'>
-      {/* Products */}
+    <>
+    {showResult && <div ref={elementRef} className='py-2 absolute top-full left-0 -translate-y-1 sm:translate-y-4 w-full max-h-[calc(100vh-150px)] sm:max-h-[350px] overflow-y-scroll overflow-x-hidden bg-white rounded-lg rounded-t-none'>
       {products.length > 0 && 
         <>
           <p className='px-2 font-semibold text-gray-600'>Products</p>
@@ -81,6 +87,7 @@ export default function SearchResult({search}) {
           </ul>
         </>
       }
-    </div>
+    </div>}
+    </>
   )
 }

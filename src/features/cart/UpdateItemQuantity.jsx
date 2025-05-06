@@ -12,7 +12,7 @@ export default function UpdateItemQuantity({item}) {
     }
 
   return (
-    <div className="flex items-center gap-2 flex-wrap justify-end">
+    <div className="flex items-center gap-2 flex-wrap justify-center">
       <FontAwesomeIcon icon={faMinus} onClick={()=> handleUpdate(item.id , -1)} 
         className='cursor-pointer rounded-full text-sm' 
         />

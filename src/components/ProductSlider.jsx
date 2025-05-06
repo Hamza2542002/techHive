@@ -13,7 +13,7 @@ export default function ProductSlider({content}) {
     arrows : false,
   };
   return (
-    <div className="h-[600px] container relative z-30">
+    <div className="h-[600px] container relative">
       <Slider {...settings}>
         {content.map((item, idx) => (
           <div>

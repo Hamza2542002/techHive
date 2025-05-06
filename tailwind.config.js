@@ -29,6 +29,9 @@ export default {
           '2xl' : "6rem",
         },
         
+      },
+      active:{
+        textColor : "#FFF",
       }
     },
   },

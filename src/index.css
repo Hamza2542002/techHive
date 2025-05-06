@@ -1,3 +1,9 @@
+/* @import "tailwindcss" important; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+  .active {
+    color: #111827 !important; /* Matches Tailwind's gray-900 */
+  }
+}

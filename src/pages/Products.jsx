@@ -1,16 +1,17 @@
 import React, { useMemo, useState } from 'react'
 import NavBar from '../components/NavBar'
 import ProductSlider from '../components/ProductSlider'
-import categories from '../data/categories';
-import brands from '../data/brands';
-import ProductCard from '../features/products/ProductCard';
 import { products } from '../data/prodcuts';
-import ExpandableFilter from '../components/Filters/ExpandableFilter';
 import useFilter from '../features/products/useFilter';
 import useSort from '../features/products/useSort';
 import SortBar from '../features/products/SortBar';
 import Footer from '../components/Footer';
 import ShowComparison from '../features/Comparison/ShowComparison';
+import ProductList from '../features/products/PeoductList.jsx';
+import Filtration from '../components/Filters/Filtration.jsx';
+import { useAuth } from '../components/Auth/AuthContext.jsx';
+import Loader from '../components/Loader.jsx';
+
 const carouselContent = [
   {
     image: "/images/banner-4.jpg",
@@ -29,12 +30,14 @@ const carouselContent = [
   }
 ];
 export default function Products() {
+  const {isLoading} = useAuth();
+  if(isLoading) return <Loader />;
+
   const [filteredProducts, setfilteredProducts] = useState(products);
   const sortedProducts = useSort(filteredProducts);
 
   function setFilters(filters) {
     setfilteredProducts(useFilter(filters));
-    console.log(filteredProducts);
   }
   return (
     <div className="bg-background text-textPrimary min-h-screen">
@@ -52,18 +55,10 @@ export default function Products() {
       </section>
 
       <section className="container grid grid-cols-1 md:grid-cols-4 gap-6">
-        <aside className="hidden md:block md:col-span-1 bg-white p-4 rounded-xl border border-borderColor h-fit sticky top-5">
-          <h3 className="text-lg font-semibold mb-4">Filter By</h3>
-          <ExpandableFilter setFilters={setFilters} data={categories} title={"Categories"} /> 
-          <ExpandableFilter setFilters={setFilters} data={brands} title={"Brands"} />
-        </aside>
+        <Filtration setFilters={setFilters} />
 
         <main className="md:col-span-3">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {sortedProducts.map((product, idx) => (
-              <ProductCard product={product} key={idx} />
-            ))}
-          </div>
+          <ProductList sortedProducts={sortedProducts} />
         </main>
       </section>
       <ShowComparison />

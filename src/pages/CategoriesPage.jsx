@@ -4,6 +4,8 @@ import categories  from "../data/categories"; // Assume you have a categories ar
 import NavBar from "../components/NavBar";
 import ProductSlider from "../components/ProductSlider";
 import Footer from "../components/Footer";
+import { useAuth } from "../components/Auth/AuthContext";
+import Loader from "../components/Loader";
 const carouselContent = [
   {
     image: "https://d13kjxnqnhcmn2.cloudfront.net/AcuCustom/Sitename/DAM/085/Gaming_for_Good_2025_-_Main1.jpg",
@@ -22,6 +24,8 @@ const carouselContent = [
   }
 ];
 export default function CategoriesPage() {
+  const {isLoading} = useAuth();
+  if(isLoading) return <Loader />;
   return (
     <div className="bg-background text-textPrimary min-h-screen">
 

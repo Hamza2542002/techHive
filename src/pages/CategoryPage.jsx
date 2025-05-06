@@ -4,10 +4,14 @@ import { useParams } from 'react-router-dom'
 import NavBar from '../components/NavBar.jsx'
 import ProductCard from '../features/products/ProductCard.jsx';
 import Footer from '../components/Footer.jsx';
+import Loader from '../components/Loader.jsx';
+import { useAuth } from '../components/Auth/AuthContext.jsx';
 
 export default function CategoryPage() {
   const {name} = useParams();
   const [categoryProducts, setCategoryProducts] = useState(products.filter((product) => product.category === name))
+  const {isLoading} = useAuth();
+  if(isLoading) return <Loader />;
 
   return (
     <div className="min-h-screen bg-background text-textPrimary">

@@ -1,17 +1,25 @@
 import React from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-
+import Button from '../components/Button'
+import Breadcrumb from '../components/Breadcrumb'
+import Loader from '../components/Loader'
+import { useAuth } from '../components/Auth/AuthContext'
 export default function Contact() {
+  const {isLoading} = useAuth();
+  if(isLoading) return <Loader />;
+
   return (
     <div className="min-h-screen bg-background text-textPrimary">
       <NavBar />
+      <div className='container py-10'>
+      <Breadcrumb />
+
       <header className="text-center my-10">
         <h1 className="text-4xl font-bold text-primary">Contact Us</h1>
         <p className="text-textSecondary mt-2">We'd love to hear from you</p>
       </header>
-      
-      <div className="container mb-10">
+
         <div className="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow border border-borderColor">
           <form className="space-y-6">
             <div>
@@ -44,12 +52,12 @@ export default function Contact() {
               ></textarea>
             </div>
 
-            <button
+            <Button
               type="submit"
-              className="w-full bg-primary text-white py-3 rounded-xl font-semibold hover:bg-accent transition"
+              size='md'
             >
               Send Message
-            </button>
+            </Button>
           </form>
         </div>
       </div>

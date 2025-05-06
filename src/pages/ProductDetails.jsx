@@ -11,9 +11,7 @@ import ShowComparison from "../features/Comparison/ShowComparison";
 
 export default function ProductDetails() {
   const { id } = useParams();
-  const { cart, dispatch } = useCart();
   const [product,setProduct] = useState(products.find((p) => p.id === parseInt(id)));
-  const isInCart = cart.filter((item) => item.id === product.id);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [product]);
@@ -21,13 +19,10 @@ export default function ProductDetails() {
   if (!product) {
     return <div className="text-center py-10 text-red-600 font-semibold">Product not found</div>;
   }
-
   return (
     <div className="min-h-screen bg-gray-50  ">
-
       <NavBar />
-
-      <div className="container py-10 relative z-50">
+      <div className="container py-10 relative z-0">
         
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto bg-white p-6 rounded-2xl shadow">
         {/* Image Section */}
@@ -38,11 +33,9 @@ export default function ProductDetails() {
             className="rounded-xl object-cover w-full max-w-md"
           />
         </div>
-
         {/* Product Info */}
         <div>
           <h1 className="text-3xl font-bold mb-2 text-primary">{product.name}</h1>
-
           <div className="flex items-center mb-4">
               <div className="flex text-yellow-400 text-xl mr-2">
                 {Array.from({ length: 5 }, (_, i) => (
@@ -52,9 +45,7 @@ export default function ProductDetails() {
               <span className="text-sm text-gray-600">{product.rating.toFixed(1)} / 5</span>
               <span className="text-sm text-gray-500 ml-2">({product.reviews.length} reviews)</span>
             </div>
-
           <p className="text-lg text-gray-700 mb-4">{product.description}</p>
-
           <div className="mb-4">
             <span className="text-xl font-bold text-accent">${product.price}</span>
             {product.discount > 0 && (
@@ -63,15 +54,12 @@ export default function ProductDetails() {
               </span>
             )}
           </div>
-
           <p className="mb-2 text-sm text-gray-600">
             Brand: <strong>{product.brand}</strong>
           </p>
-
           <p className="mb-4 text-sm text-gray-600">
             Category: <strong>{product.category}</strong>
           </p>
-
           <div className="mb-4">
             <h3 className="font-semibold mb-2">Specifications:</h3>
             <ul className="list-disc pl-5 text-sm text-gray-700 space-y-1">
@@ -82,12 +70,12 @@ export default function ProductDetails() {
               ))}
             </ul>
           </div>
-
-        <AddToCart product={product} />
-        <AddToComparison product={product} />
+        <div className='flex flex-col justify-between mt-2 gap-2'>
+          <AddToCart product={product} />
+          <AddToComparison product={product} />
+        </div>
         </div>
       </div>
-
       {/* Reviews */}
         <div className="max-w-6xl mx-auto mt-10">
           <h2 className="text-2xl font-semibold mb-4">Customer Reviews</h2>
@@ -102,7 +90,6 @@ export default function ProductDetails() {
           </div>
         </div>
       </div>
-
       <div className="container mt-16">
         <h2 className="text-3xl font-semibold mb-4">Related Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -128,12 +115,10 @@ export default function ProductDetails() {
             ))}
         </div>
       </div>
-
       <ShowComparison /> 
       <footer className="bg-gray-900 text-white py-10 mt-10">
         <Footer />
       </footer>
-
     </div>
   );
 }
