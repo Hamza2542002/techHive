@@ -18,14 +18,13 @@ export default function User() {
       <Link to={'/login'} className='py-2 px-4 text-sm bg-primary text-white rounded-lg hover:bg-white hover:text-primary border-2 border-primary duration-200' >login</Link>
     </div>
   );
-
   return (
     <div ref={elementRef} className='flex items-center justify-between gap-2 bg-white relative'>
       <div
         className='flex flex-col items-center justify-center rounded-full w-10 h-auto cursor-pointer'
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
-        <img src={user.avatar} alt="/images/user.png" className='rounded-full max-w-full' />
+        <img src={user.avatar ?? "/images/user.png"} alt={user.name} className='rounded-full max-w-full' />
       </div>
       {isMenuOpen && (
         <ul className='absolute left-full top-full translate-y-4 -translate-x-full bg-white shadow-lg rounded-b-lg p-4 w-48 z-50'>

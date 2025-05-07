@@ -14,8 +14,8 @@ const modes = {
 export default function Button({children, onClick, variation = "primary" , type = "button" , size = "md" , mode = "fill", pending = false}) {
   return (
     <button
-      className={`rounded-lg text-white  opacity-100 border-2 transition duration-300 ease-in-out 
-        ${variations[variation]} ${sizes[size]} ${modes[mode]}`}
+      className={`rounded-lg text-white  opacity-100 border-2 transition duration-300 ease-in-out
+        ${variations[variation]} ${sizes[size]} ${modes[mode]}  ${pending ? 'opacity-50 cursor-not-allowed':""}`}
       onClick={onClick}
       type={type}
       disabled={pending}

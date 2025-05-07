@@ -1,5 +1,6 @@
+const API_URL = "http://localhost:3000/users";
 export async function loginAsync(email, password) {
-  const response = await fetch(`https://data-acyk.onrender.com/users`);
+  const response = await fetch(`http://localhost:3000/users`);
 
   if (!response.ok) {
     console.error("Failed to fetch users:", response);
@@ -7,18 +8,16 @@ export async function loginAsync(email, password) {
   }
 
   const users = await response.json();
-  console.log("Fetched users:", users);
 
   for (const user of users) {
     if (user.email === email && user.password === password) {
-      console.log("User found:", user);
       return user;
     }
   }
 }
 
 export async function registerAsync(user) {
-  const response = await fetch("https://data-acyk.onrender.com/users", {
+  const response = await fetch("http://localhost:3000/users", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -35,7 +34,7 @@ export async function registerAsync(user) {
 }
 
 export async function getUserAsync(id) {
-  const response = await fetch(`https://data-acyk.onrender.com/users/${id}`);
+  const response = await fetch(`http://localhost:3000/users/${id}`);
 
   if (!response.ok) {
     throw new Error("Registration failed");
@@ -43,4 +42,22 @@ export async function getUserAsync(id) {
 
   const user = await response.json();
   return user;
+}
+
+export async function updateUserAsync(id, user) {
+  const response = await fetch(`http://localhost:3000/users/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(user),
+  });
+
+  if (!response.ok) {
+    throw new Error("Update failed");
+  }
+  console.log("User updated successfully:", user);
+
+  const updatedUser = await response.json();
+  return updatedUser;
 }

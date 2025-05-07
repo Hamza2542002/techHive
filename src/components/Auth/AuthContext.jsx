@@ -1,5 +1,5 @@
-import { createContext, useContext, useEffect, useReducer } from 'react';
-import { getUserAsync, loginAsync, registerAsync } from '../../Services/Auth.js'; // Adjust the import path as necessary
+import { act, createContext, useContext, useEffect, useReducer } from 'react';
+import { getUserAsync, loginAsync, registerAsync, updateUserAsync } from '../../Services/Auth.js'; // Adjust the import path as necessary
 const initialState = {
   user: null,
   isAuthenticated: false,
@@ -15,13 +15,12 @@ function reducer(state , action){
     case "user/register":
       return {
         ...state,
-        user: action.payload.user,
+        user: action.payload,
         isAuthenticated: true,
         isLoading: false,
         error:"",
       };
     case "user/login":
-      console.log("User logged in:", action.payload);
       return {
         ...state,
         user: action.payload,
@@ -33,10 +32,11 @@ function reducer(state , action){
       return {
         ...state,
         user: null,
+        isLoading: false,
         isAuthenticated: false,
         error:"",
       };
-    case "waiting":
+    case "waiting":   
       return {
         ...state,
         isLoading: action.payload,
@@ -44,55 +44,100 @@ function reducer(state , action){
     case "error":
       return {
         ...state,
+        isLoading : false,
         error: action.payload,
       };
-    case "failed":
+    case "user/loadedfailed":
       return {
         ...state,
         user: null,
         isAuthenticated: false,
-        error: action.payload.error,
+        isLoading: false,
+        error: action.payload,
       };
     case "user/loaded":
       return {
         ...state,
+        isLoading: false,
+        isAuthenticated: true,
+        error:"",
         user: action.payload,
       };
+    case "user/update":{
+      return {
+        ...state,
+        user: action.payload,
+        isLoading: false,
+      }
+    }
       default:
-      break;
+        return state;
   }
 }
 
 function AuthProvider({ children }) {
   const [{user , isAuthenticated , isLoading , error} , dispatch] = useReducer(reducer, initialState);
 
-  useEffect(function(){
+  useEffect(() => {
     async function fetchUser(){
       dispatch({ type: "waiting", payload: true });
       const storedUserId = localStorage.getItem("userId");
       if (storedUserId) {
-        const user = await getUserAsync(storedUserId);
-        console.log("Stored User:", user);
-        dispatch({ type: "user/loaded", payload: user });
+        console.log("Stored User ID:", storedUserId);
+        try{
+          const fetchedUser = await getUserAsync(storedUserId);
+          console.log("Stored User:", fetchedUser);
+          dispatch({ type: "user/loaded", payload: fetchedUser });
+        }
+        catch(error){
+          console.error("Error fetching user:", error);
+          dispatch({ type: "user/loadedfailed", payload: { error: "Failed to load user" } });
+        }
       }
-      dispatch({ type: "waiting", payload: false });
+      else {
+        dispatch({ type: "user/loadedfailed", payload: null });
+      }
     }
+
     fetchUser();
-  } 
-  , []);
+  }, []);
 
   async function login(email , password) {
     dispatch({ type: "waiting", payload: true });
-    const user = await loginAsync(email, password);
-    console.log("User:", user);
-    dispatch({ type: "user/login", payload:  user });
+    try{
+      const user = await loginAsync(email, password);
+      console.log("User:", user);
+      dispatch({ type: "user/login", payload:  user });
+    }
+    catch(error){
+      console.error("Login Failed:", error);
+      dispatch({ type: "error", payload: error.message });
+    }
   }
 
   async function register(user) {
-    
+    try{
+      dispatch({ type: "waiting", payload: true });
+      const createdUser = await registerAsync(user);
+      dispatch({ type: "user/register", payload: createdUser });
+    }
+    catch(error){
+      console.error("Registration Failed:", error);
+      dispatch({ type: "error", payload: error.message });
+    }
+  }
+
+  async function updateUser(id, user) {
     dispatch({ type: "waiting", payload: true });
-    const createdUser = await registerAsync(user);
-    dispatch({ type: "user/register", payload: {createdUser} });
+    try{
+      const updatedUser = await updateUserAsync(id, user);
+      console.log("Updated User:", updatedUser);
+      dispatch({ type: "user/update", payload: updatedUser });
+    }
+    catch(error){
+      console.error("Update Failed:", error);
+      dispatch({ type: "error", payload: error.message });
+    }
   }
 
   function logout() {
@@ -105,6 +150,7 @@ function AuthProvider({ children }) {
       value={{
         login,
         register,
+        updateUser,
         logout,
         user,
         isAuthenticated,

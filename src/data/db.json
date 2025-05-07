@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "jack@example.com",
+      "password": "0000",
+      "avatar": "https://i.pravatar.cc/100?u=zz",
+      "phone": "1234567890",
+      "address": "123 Main St, Cityville, ST 12345"
+    },
+    {
+      "id": "9031",
+      "name": "hamza",
+      "email": "hamza@m.com",
+      "password": "0000",
+      "avatar": "https://i.pravatar.cc/100?u=zz",
+      "phone": "01275896321",
+      "address": "هناك"
+    }
+  ]
+}

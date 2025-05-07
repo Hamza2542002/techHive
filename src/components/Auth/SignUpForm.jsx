@@ -13,11 +13,15 @@ export default function SignUpForm() {
   const[name , setName] = useState('')
   const[errorMessgae , setErrorMessage] = useState("");
   useEffect(() => {
-    if(isAuthenticated || user != null || localStorage.getItem("isAuthenticated") == "true") {
-      navigate('/', {replace: true});
+    if(localStorage.getItem("userId") !== null){
+      navigate("/",{ replace:true })
+    }
+    if(isAuthenticated){
+      localStorage.setItem("userId" , user.id)
+      navigate("/",{ replace:true })
     }
   }
-  , [isAuthenticated, user , navigate])
+  , [isAuthenticated,user])
   async  function handleSubmit(event) {
     event.preventDefault()
     if(password !== confirmPassword) {
@@ -25,10 +29,12 @@ export default function SignUpForm() {
       return
     }
     await register({
-      email, 
+      name,
+      email,
       password,
-      name, 
-      Avatar : "https://i.pravatar.cc/100?u=zz"
+      avatar : "https://i.pravatar.cc/100?u=zz",
+      phone: "",
+      address : ""
     })
   }
   return (
